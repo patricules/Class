@@ -1,46 +1,219 @@
 <!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Module 2 Responsive</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <h1> Our Menu</h1>
-    <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <section class="chicken">
-                <h2>Chicken</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos natus blanditiis numquam delectus nam at dignissimos incidunt expedita, autem debitis suscipit voluptate veniam optio eum iste temporibus culpa. Quae, nihil.
-                </p>
-            </section>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1 class="menu">Our Menu</h1>
+        <div class="col-lg-4">
+          <div class="items">
+            <div>
+              <h3 id="o">Chicken</h3>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laboriosam error tenetur corporis vitae! Rem adipisci doloremque
+              nulla quo, culpa eligendi ea? Id, ratione quis excepturi similique
+              vitae perferendis dignissimos cumque ea ducimus architecto. Optio
+              nesciunt iusto molestiae facere dolorum maiores.
+            </p>
+          </div>
         </div>
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <section class="beef">
-                <h2>Beef</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos natus blanditiis numquam delectus nam at dignissimos incidunt expedita, autem debitis suscipit voluptate veniam optio eum iste temporibus culpa. Quae, nihil.
-                </p>
-            </section>
+        <div class="col-lg-4">
+          <div class="items">
+            <div>
+              <h3 id="t">Beef</h3>
+            </div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Necessitatibus dolores libero, iusto omnis aperiam, fuga inventore
+              magnam modi nulla qui provident ea maiores explicabo, culpa porro
+              tenetur perferendis pariatur eius esse expedita sequi voluptatem
+              rem cumque? Architecto error iste ipsam.
+            </p>
+          </div>
         </div>
-
-        <div class="col-lg-4 col-md-12 col-sm-12">
-            <section class="sushi">
-                <h2>Sushi</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos natus blanditiis numquam delectus nam at dignissimos incidunt expedita, autem debitis suscipit voluptate veniam optio eum iste temporibus culpa. Quae, nihil.
-                </p>
-            </section>
-
+        <div class="col-lg-4 col-lg-tablet">
+          <div class="items">
+            <div>
+              <h3 id="th">Sushi</h3>
+            </div>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+              enim ipsa, sit reiciendis quis cum animi eveniet dolorum sint ad
+              nesciunt, et sed repudiandae? Nemo, expedita officiis qui incidunt
+              architecto ipsa fugit nesciunt, cupiditate maiores alias
+              necessitatibus temporibus iure officia?
+            </p>
+          </div>
         </div>
-
+      </div>
     </div>
-
-</body>
-
+  </body>
 </html>
+
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Times new roman, Georgia, serif;
+}
+
+.row {
+    width: 100%;
+}
+
+.container {
+    position: relative;
+    top: 60px;
+    margin: 15px;
+}
+
+.menu {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.items {
+    position: relative;
+    top: 0;
+    background-color: grey;
+    margin: 20px;
+    padding: 12px;
+    border: 3px solid black;
+}
+
+.items p {
+    margin-top: 30px;
+    position: relative;
+    text-align: justify;
+    font-size: 120%;
+}
+
+.items h3 {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    padding: 8px 72px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+#o {
+    background-color: pink;
+}
+
+#t {
+    background-color: brown;
+    color: white
+}
+
+#th {
+    background-color: yellowgreen;
+}
+
+/*Responsive FrameWork*/
+
+/* For Desktopp */
+
+@media(min-width: 992px) {
+
+    col-lg-1,
+    .col-lg-2,
+    .col-lg-3,
+    .col-lg-4,
+    .col-lg-5,
+    .col-lg-6,
+    .col-lg-7,
+    .col-lg-8,
+    .col-lg-9,
+    .col-lg-10,
+    .col-lg-11,
+    .col-lg-12 {
+        float: left;
+    }
+
+    .col-lg-1 {
+        width: 8.33%;
+    }
+
+    .col-lg-2 {
+        width: 16.66%;
+    }
+
+    .col-lg-3 {
+        width: 25%;
+    }
+
+    .col-lg-4 {
+        width: 33.33%;
+    }
+
+    .col-lg-5 {
+        width: 41.66%;
+    }
+
+    .col-lg-6 {
+        width: 50%;
+    }
+
+    .col-lg-7 {
+        width: 58.33%;
+    }
+
+    .col-lg-8 {
+        width: 66.66%;
+    }
+
+    .col-lg-9 {
+        width: 74.99%;
+    }
+
+    .col-lg-10 {
+        width: 83.33%;
+    }
+
+    .col-lg-11 {
+        width: 91.66%;
+    }
+
+    .col-lg-12 {
+        width: 100%;
+    }
+}
+
+/* For Tablet */
+
+@media(min-width:768px) and (max-width:991px) {
+    .col-lg-4 {
+        width: 50%;
+        float: left;
+    }
+
+    .col-lg-tablet {
+        width: 100%;
+        float: left;
+    }
+}
+
+/* For Mobile */
+
+@media(max-width:767) {
+    .col-lg-4 {
+        width: 100%;
+        float: left;
+    }
+}
